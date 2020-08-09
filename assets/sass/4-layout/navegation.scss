@@ -1,0 +1,49 @@
+nav ul li a {
+    text-decoration: none;
+}
+
+.navbar {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu {
+    display: none;
+}
+
+@media screen and (max-width: 375px) {
+    .nav__bar--desktop {
+        display: none;
+    }
+
+    .nav__bar--mobile {
+        display: block;
+
+        label i {
+            font-size: 50px;
+        }
+    }
+
+    .navbar__mobile__items {
+        height: 0;
+        overflow: hidden;
+        transition: all 10s ease-in-out;
+    }
+
+    #menu:checked~.navbar__mobile__items {
+        height: 100%;
+    }
+
+}
+
+@media screen and (min-width: 376px) {
+    .nav__bar--desktop {
+        display: block;
+    }
+
+    .nav__bar--mobile {
+        display: none;
+    }
+}

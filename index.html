@@ -5,19 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <title>Tienda TDX</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="nav">
+        <div class="navbar">
             <img src="./assets/image/logo 2.png" alt="" width="80">
-            <ul>
-                <li>Mujer</li>
-                <li>Hombre</li>
-                <li>Accesorios</li>
-                <li>Blog</li>
-            </ul>
+            <nav class="nav__bar--desktop">
+                <ul>
+                    <li><a href="">Mujer</a></li>
+                    <li><a href="">Hombre</a></li>
+                    <li><a href="">Accesorios</a></li>
+                    <li><a href="">Blog</a></li>
+                </ul>
+            </nav>
+            <nav class="nav__bar--mobile">
+                <input type="checkbox" id="menu">
+                <label for="menu"><i class="fas fa-bars"></i></label>
+                <div class="navbar__mobile__items">
+                    <ul>
+                        <li><a href="">Mujer</a></li>
+                        <li><a href="">Hombre</a></li>
+                        <li><a href="">Accesorios</a></li>
+                        <li><a href="">Blog</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
         <div class=" aside">
             <img src="./assets/image/chaqueta_verde.jpg" alt="" width="670" height="650">

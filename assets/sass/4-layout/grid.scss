@@ -2,7 +2,7 @@
     display: grid;
     grid-template-areas:
         'nav nav nav nav'
-        'section section section aside';
+        'section section aside aside';
     grid-gap: 10px;
     padding-left: 100px;
     padding-right: 100px;
@@ -16,10 +16,12 @@
     .nav ul {
         display: flex;
         margin-right: 80px;
+        text-decoration: none;
 
         li {
             margin-left: 70px;
             margin-top: 60px;
+
         }
 
     }
@@ -64,5 +66,19 @@
 
     .aside {
         grid-area: aside;
+        width: 100%;
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-areas:
+            'nav nav nav'
+            'aside aside aside'
+            'section section section';
     }
 }

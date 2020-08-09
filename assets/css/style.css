@@ -775,7 +775,7 @@ template {
 
 .container {
   display: grid;
-  grid-template-areas: "nav nav nav nav" "section section section aside";
+  grid-template-areas: "nav nav nav nav" "section section aside aside";
   grid-gap: 10px;
   padding-left: 100px;
   padding-right: 100px;
@@ -788,6 +788,7 @@ template {
 .container .nav ul {
   display: flex;
   margin-right: 80px;
+  text-decoration: none;
 }
 .container .nav ul li {
   margin-left: 70px;
@@ -822,6 +823,62 @@ template {
 }
 .container .aside {
   grid-area: aside;
+  width: 100%;
+}
+.container .aside img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-areas: "nav nav nav" "aside aside aside" "section section section";
+  }
+}
+nav ul li a {
+  text-decoration: none;
+}
+
+.navbar {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#menu {
+  display: none;
+}
+
+@media screen and (max-width: 375px) {
+  .nav__bar--desktop {
+    display: none;
+  }
+
+  .nav__bar--mobile {
+    display: block;
+  }
+  .nav__bar--mobile label i {
+    font-size: 50px;
+  }
+
+  .navbar__mobile__items {
+    height: 0;
+    overflow: hidden;
+    transition: all 10s ease-in-out;
+  }
+
+  #menu:checked ~ .navbar__mobile__items {
+    height: 100%;
+  }
+}
+@media screen and (min-width: 376px) {
+  .nav__bar--desktop {
+    display: block;
+  }
+
+  .nav__bar--mobile {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
